@@ -447,9 +447,9 @@ function ResourceView(element, calendar, viewName) {
                 var hours = Math.floor(mins/60);
                 date.setHours(hours);
                 date.setMinutes(mins%60 + minMinute);
-                trigger('dayClick', dayBodyCells[col], date, false, ev);
+                 trigger('dayClick', dayBodyCells[col], date, false, ev, resources[col]);
             }else{
-                trigger('dayClick', dayBodyCells[col], date, true, ev);
+                trigger('dayClick', dayBodyCells[col], date, true, ev, resources[col]);
             }
         }
     }
